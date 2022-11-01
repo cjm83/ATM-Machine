@@ -1,7 +1,5 @@
 package test;
 
-
-import static org.junit.Assert.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.io.ByteArrayInputStream;
@@ -98,7 +96,6 @@ class TestAccount {
 		testAccount2.getsavingWithdrawInput(System.in, System.out);
 		System.setOut(sysOutBackup);
 		System.setIn(sysInBackup);
-		System.out.println(out.toString());
 		assertTrue(out.toString().contains("Invalid Choice."));
 		assertTrue(out.toString().contains("Balance Cannot Be Negative."));
 		assertTrue(out.toString().contains("Current Savings Account Balance: $0.00"));
@@ -118,7 +115,6 @@ class TestAccount {
 		testAccount2.getCheckingDepositInput(System.in, System.out);
 		System.setOut(sysOutBackup);
 		System.setIn(sysInBackup);
-		System.out.println(out.toString());
 		assertTrue(out.toString().contains("Invalid Choice."));
 		assertTrue(out.toString().contains("Balance Cannot Be Negative."));
 		assertTrue(out.toString().contains("Current Checking Account Balance: $200.00"));
@@ -138,7 +134,6 @@ class TestAccount {
 		testAccount2.getSavingDepositInput(System.in, System.out);
 		System.setOut(sysOutBackup);
 		System.setIn(sysInBackup);
-		System.out.println(out.toString());
 		assertTrue(out.toString().contains("Invalid Choice."));
 		assertTrue(out.toString().contains("Balance Cannot Be Negative."));
 		assertTrue(out.toString().contains("Current Savings Account Balance: $200.00"));
